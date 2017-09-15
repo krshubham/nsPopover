@@ -25,7 +25,7 @@
       theme: 'ns-popover-list-theme',
       timeout: 1.5,
       trigger: 'click',
-      triggerPrevent: true,
+      triggerPrevent: true
     };
 
     this.setDefaults = function(newDefaults) {
@@ -93,7 +93,7 @@
             theme: attrs.nsPopoverTheme || defaults.theme,
             timeout: attrs.nsPopoverTimeout || defaults.timeout,
             trigger: attrs.nsPopoverTrigger || defaults.trigger,
-            triggerPrevent: attrs.nsPopoverTriggerPrevent || defaults.triggerPrevent,
+            triggerPrevent: attrs.nsPopoverTriggerPrevent || defaults.triggerPrevent
           };
           var placement_;
           var unregisterActivePopoverListeners;
@@ -133,7 +133,7 @@
                 .off('mouseout', hide)
                 .off('mouseover', cancel)
               ;
-            }
+            };
           }
 
           /**
@@ -535,7 +535,7 @@
             unregisterDisplayMethod = scope.$on(
               options.scopeEvent,
               display
-            )
+            );
 
           // Otherwise just display the popover whenever the event that was
           // passed to the `trigger` attribute occurs on the element.
@@ -543,7 +543,7 @@
             elm.on(options.trigger, display);
             unregisterDisplayMethod = function() {
               elm.off(options.trigger, display);
-            }
+            };
           }
 
           // Load the template and compile the popover.
